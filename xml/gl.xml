@@ -24631,7 +24631,7 @@ typedef unsigned int GLhandleARB;
             <alias name="glTexStorage3DMultisample"/>
         </command>
         <command>
-            <proto>void <name>TexStorageAttribs2DEXT</name></proto>
+            <proto>void <name>glTexStorageAttribs2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
@@ -24640,7 +24640,7 @@ typedef unsigned int GLhandleARB;
             <param group="TexStorageAttribs">const int *<name>attrib_list</name></param>
         </command>
         <command>
-            <proto>void <name>TexStorageAttribs3DEXT</name></proto>
+            <proto>void <name>glTexStorageAttribs3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
