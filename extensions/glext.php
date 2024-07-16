@@ -1051,4 +1051,10 @@
 </li>
 <li value=556><a href="extensions/EXT/EXT_texture_storage.txt">GL_EXT_texture_storage</a>
 </li>
+<li value=557><a href="extensions/EXT/EXT_shader_samples_identical.txt">GL_EXT_shader_samples_identical</a>
+</li>
+<li value=558><a href="extensions/EXT/EXT_framebuffer_blit_layers.txt">GL_EXT_framebuffer_blit_layers</a>
+</li>
+<li value=559><a href="extensions/NV/NV_uniform_buffer_std430_layout.txt">GL_NV_uniform_buffer_std430_layout</a>
+</li>
 </ol>
