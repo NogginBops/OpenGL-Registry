@@ -4580,6 +4580,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8BBB" name="GL_FRAMEBUFFER_FLIP_Y_MESA"/>
         <enum value="0x8BBC" name="GL_FRAMEBUFFER_FLIP_X_MESA" />
         <enum value="0x8BBD" name="GL_FRAMEBUFFER_SWAP_XY_MESA" />
+        <enum value="0x8BBE" name="GL_CONST_BW_TILING_MESA"/>
     </enums>
 
     <enums namespace="GL" start="0x8BC0" end="0x8BFF" vendor="QCOM" comment="Reassigned from AMD to QCOM">
@@ -7032,6 +7033,10 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9720" end="0x973F" vendor="ANGLE"/>
     </enums>
 
+    <enums namespace="GL" start="0x9740" end="0x975F" vendor="MESA" comment="Reserved for VK_EXT_mesh_shader (github pull request 640)">
+            <unused start="0x9740" end="0x975F" vendor="MESA"/>
+    </enums>
+
 <!-- Enums reservable for future use. To reserve a new range, allocate one
      or more multiples of 16 starting at the lowest available point in this
      block and note it in a new <enums> block immediately above.
@@ -7041,8 +7046,8 @@ typedef unsigned int GLhandleARB;
      file) File requests in the Khronos Bugzilla, OpenGL project, Registry
      component. -->
 
-    <enums namespace="GL" start="0x9740" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
-        <unused start="0x9740" end="99999" comment="RESERVED"/>
+    <enums namespace="GL" start="0x9760" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
+        <unused start="0x9760" end="99999" comment="RESERVED"/>
     </enums>
 
 <!-- Historical large block allocations, all unused except (in older days) by IBM -->
@@ -43487,6 +43492,11 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_MESA_shader_integer_functions" supported="gl|gles2"/>
+	<extension name="GL_MESA_texture_const_bandwidth" supported="gl|gles2">
+            <require>
+                <enum name="GL_CONST_BW_TILING_MESA"/>
+	    </require>
+        </extension>
         <extension name="GL_MESA_tile_raster_order" supported="gl">
             <require>
                 <enum name="GL_TILE_RASTER_ORDER_FIXED_MESA"/>
@@ -45103,7 +45113,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_REFLECTION_MAP_NV"/>
             </require>
         </extension>
-        <extension name="GL_NV_texture_barrier" supported="gl|glcore">
+        <extension name="GL_NV_texture_barrier" supported="gl|glcore|gles2">
             <require>
                 <command name="glTextureBarrierNV"/>
             </require>
